@@ -14,13 +14,15 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Quicksand",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Quicksand", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #05071e; /* Background color for the entire website, including individual sections */
   --default-color: #e8e7f7; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
@@ -31,7 +33,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #c8c6e3;  /* The default color of the main navmenu links */
+  --nav-color: #c8c6e3; /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #03051f; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #1f2240; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -241,12 +243,12 @@ h6 {
     position: relative;
   }
 
-  .navmenu>ul>li {
+  .navmenu > ul > li {
     white-space: nowrap;
     padding: 15px 14px;
   }
 
-  .navmenu>ul>li:last-child {
+  .navmenu > ul > li:last-child {
     padding-right: 0;
   }
 
@@ -273,7 +275,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
+  .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -287,13 +289,13 @@ h6 {
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
+  .navmenu li:hover > a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -332,11 +334,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -348,7 +350,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -450,7 +452,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -477,7 +479,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -490,7 +492,8 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-top {
@@ -588,7 +591,8 @@ h6 {
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -721,7 +725,11 @@ h6 {
   margin-right: 0.2rem;
 }
 
-.page-title .breadcrumbs .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+.page-title
+  .breadcrumbs
+  .breadcrumb
+  .breadcrumb-item
+  + .breadcrumb-item::before {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
@@ -774,7 +782,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -806,7 +813,11 @@ section,
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 100%
+  );
   padding: 120px 0;
 }
 
@@ -928,7 +939,11 @@ section,
 .hero .hero-bg-elements .bg-shape {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--accent-color), transparent 95%));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 90%),
+    color-mix(in srgb, var(--accent-color), transparent 95%)
+  );
 }
 
 .hero .hero-bg-elements .bg-shape.shape-1 {
@@ -953,13 +968,16 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 85%) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent-color), transparent 85%) 1px,
+    transparent 1px
+  );
   background-size: 50px 50px;
   animation: moveParticles 30s linear infinite;
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -1082,7 +1100,8 @@ section,
 
 .about .image-composition .image-main img {
   border-radius: 8px;
-  box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 15px 40px
+    color-mix(in srgb, var(--default-color), transparent 85%);
   border: 5px solid color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
@@ -1097,7 +1116,8 @@ section,
 .about .image-composition .image-secondary img {
   border-radius: 8px;
   border: 5px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 80%);
+  box-shadow: 0 10px 30px
+    color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .about .image-composition .stats-card {
@@ -1108,7 +1128,8 @@ section,
   background: var(--surface-color);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 10px 30px
+    color-mix(in srgb, var(--default-color), transparent 90%);
   display: flex;
   gap: 2rem;
 }
@@ -1194,7 +1215,11 @@ section,
   width: 80px;
   height: 80px;
   margin: 0 auto 25px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #8b5cf6 30%)
+  );
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1272,7 +1297,11 @@ section,
 }
 
 .services .services-cta {
-  background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 3%));
+  background: linear-gradient(
+    135deg,
+    var(--surface-color),
+    color-mix(in srgb, var(--surface-color), var(--accent-color) 3%)
+  );
   border-radius: 24px;
   padding: 50px 40px;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
@@ -1295,7 +1324,11 @@ section,
 }
 
 .services .services-cta .btn {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #8b5cf6 30%)
+  );
   border: none;
   border-radius: 50px;
   padding: 14px 32px;
@@ -1401,13 +1434,19 @@ section,
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
   transition: left 0.5s;
 }
 
 .portfolio .portfolio-filters li:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 85%);
+  box-shadow: 0 8px 25px
+    color-mix(in srgb, var(--accent-color), transparent 85%);
   border-color: var(--accent-color);
 }
 
@@ -1416,17 +1455,23 @@ section,
 }
 
 .portfolio .portfolio-filters li.filter-active {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #4338ca 20%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #4338ca 20%)
+  );
   color: var(--contrast-color);
   border-color: var(--accent-color);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 8px 30px
+    color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .portfolio .portfolio-wrapper {
   background-color: var(--surface-color);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 20px color-mix(in srgb, var(--default-color), transparent 92%);
+  box-shadow: 0 4px 20px
+    color-mix(in srgb, var(--default-color), transparent 92%);
   margin-bottom: 30px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
@@ -1434,7 +1479,8 @@ section,
 
 .portfolio .portfolio-wrapper:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 20px 40px
+    color-mix(in srgb, var(--default-color), transparent 85%);
   border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
@@ -1466,7 +1512,11 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 70%, white 15%), color-mix(in srgb, var(--accent-color) 90%, black 15%));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color) 70%, white 15%),
+    color-mix(in srgb, var(--accent-color) 90%, black 15%)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1476,12 +1526,21 @@ section,
   backdrop-filter: blur(2px);
 }
 
-.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions {
+.portfolio
+  .portfolio-wrapper
+  .portfolio-image
+  .portfolio-hover
+  .portfolio-actions {
   display: flex;
   gap: 15px;
 }
 
-.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn {
+.portfolio
+  .portfolio-wrapper
+  .portfolio-image
+  .portfolio-hover
+  .portfolio-actions
+  .action-btn {
   width: 50px;
   height: 50px;
   background-color: var(--surface-color);
@@ -1495,7 +1554,12 @@ section,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn:hover {
+.portfolio
+  .portfolio-wrapper
+  .portfolio-image
+  .portfolio-hover
+  .portfolio-actions
+  .action-btn:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-3px);
@@ -1519,12 +1583,20 @@ section,
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--accent-color);
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--accent-color), transparent 85%));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 90%),
+    color-mix(in srgb, var(--accent-color), transparent 85%)
+  );
   padding: 6px 12px;
   border-radius: 20px;
 }
 
-.portfolio .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating {
+.portfolio
+  .portfolio-wrapper
+  .portfolio-content
+  .portfolio-meta
+  .project-rating {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1533,7 +1605,12 @@ section,
   color: #fbbf24;
 }
 
-.portfolio .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating i {
+.portfolio
+  .portfolio-wrapper
+  .portfolio-content
+  .portfolio-meta
+  .project-rating
+  i {
   font-size: 0.8rem;
 }
 
@@ -1569,7 +1646,11 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-wrapper .portfolio-content .portfolio-tech .tech-badge:hover {
+.portfolio
+  .portfolio-wrapper
+  .portfolio-content
+  .portfolio-tech
+  .tech-badge:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
   border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
@@ -1578,7 +1659,11 @@ section,
 .portfolio .portfolio-cta {
   margin-top: 60px;
   padding: 40px 30px;
-  background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 5%));
+  background: linear-gradient(
+    135deg,
+    var(--surface-color),
+    color-mix(in srgb, var(--surface-color), var(--accent-color) 5%)
+  );
   border-radius: 20px;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
 }
@@ -1613,15 +1698,21 @@ section,
 }
 
 .portfolio .portfolio-cta .cta-buttons .btn.btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #4338ca 20%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #4338ca 20%)
+  );
   color: var(--contrast-color);
   border: none;
-  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 4px 15px
+    color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .portfolio .portfolio-cta .cta-buttons .btn.btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 8px 25px
+    color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .portfolio .portfolio-cta .cta-buttons .btn.btn-outline {
@@ -1634,7 +1725,8 @@ section,
   background-color: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 8px 25px
+    color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 /*--------------------------------------------------------------
@@ -1665,7 +1757,11 @@ section,
 .why-us .feature-card .icon-wrapper {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #8b5cf6 30%)
+  );
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1706,7 +1802,8 @@ section,
 
 .why-us .feature-card .feature-stats {
   padding-top: 20px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .why-us .feature-card .feature-stats .stat-number {
@@ -1765,7 +1862,11 @@ section,
 .why-us .feature-content .feature-list .feature-item .feature-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 80%), color-mix(in srgb, var(--accent-color), transparent 90%));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 80%),
+    color-mix(in srgb, var(--accent-color), transparent 90%)
+  );
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -1808,14 +1909,19 @@ section,
 }
 
 .why-us .feature-content .cta-wrapper .btn.btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #8b5cf6 30%)
+  );
   color: var(--contrast-color);
   border-color: var(--accent-color);
 }
 
 .why-us .feature-content .cta-wrapper .btn.btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 10px 30px
+    color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .why-us .feature-content .cta-wrapper .btn.btn-outline {
@@ -1900,7 +2006,11 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 50%));
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #8b5cf6 50%)
+  );
   border-radius: 24px 24px 0 0;
 }
 
@@ -1969,7 +2079,11 @@ section,
   right: 0;
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 50%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #8b5cf6 50%)
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1994,7 +2108,8 @@ section,
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
 .testimonials .company-badge {
@@ -2200,7 +2315,11 @@ section,
 .team .team-grid .member-hexagon .hexagon-inner .member-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), transparent 10%) 0%, color-mix(in srgb, var(--accent-color), transparent 25%) 100%);
+  background: linear-gradient(
+    45deg,
+    color-mix(in srgb, var(--accent-color), transparent 10%) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 25%) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2231,7 +2350,13 @@ section,
   gap: 8px;
 }
 
-.team .team-grid .member-hexagon .hexagon-inner .member-overlay .social-icons a {
+.team
+  .team-grid
+  .member-hexagon
+  .hexagon-inner
+  .member-overlay
+  .social-icons
+  a {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -2242,7 +2367,13 @@ section,
   transition: all 0.3s ease;
 }
 
-.team .team-grid .member-hexagon .hexagon-inner .member-overlay .social-icons a:hover {
+.team
+  .team-grid
+  .member-hexagon
+  .hexagon-inner
+  .member-overlay
+  .social-icons
+  a:hover {
   background: var(--contrast-color);
   transform: translateY(-2px);
 }
@@ -2288,11 +2419,19 @@ section,
   transition: transform 0.3s ease;
 }
 
-.team .team-carousel-wrapper .leadership-slider .leader-card .leader-image::after {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .leader-card
+  .leader-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--accent-color), transparent 85%) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    color-mix(in srgb, var(--accent-color), transparent 85%) 100%
+  );
 }
 
 .team .team-carousel-wrapper .leadership-slider .leader-card .leader-info {
@@ -2306,7 +2445,12 @@ section,
   color: var(--heading-color);
 }
 
-.team .team-carousel-wrapper .leadership-slider .leader-card .leader-info .position {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .leader-card
+  .leader-info
+  .position {
   color: var(--accent-color);
   font-weight: 500;
   font-size: 0.95rem;
@@ -2321,13 +2465,24 @@ section,
   margin-bottom: 20px;
 }
 
-.team .team-carousel-wrapper .leadership-slider .leader-card .leader-info .leader-contact {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .leader-card
+  .leader-info
+  .leader-contact {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.team .team-carousel-wrapper .leadership-slider .leader-card .leader-info .leader-contact .contact-btn {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .leader-card
+  .leader-info
+  .leader-contact
+  .contact-btn {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -2338,23 +2493,41 @@ section,
   transition: all 0.3s ease;
 }
 
-.team .team-carousel-wrapper .leadership-slider .leader-card .leader-info .leader-contact .contact-btn:hover {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .leader-card
+  .leader-info
+  .leader-contact
+  .contact-btn:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-2px);
 }
 
-.team .team-carousel-wrapper .leadership-slider .swiper-pagination .swiper-pagination-bullet {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   background: color-mix(in srgb, var(--accent-color), transparent 70%);
   opacity: 1;
 }
 
-.team .team-carousel-wrapper .leadership-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.team
+  .team-carousel-wrapper
+  .leadership-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--accent-color);
 }
 
 .team .join-team-cta {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, color-mix(in srgb, var(--accent-color), transparent 92%) 100%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 92%) 100%
+  );
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
   border-radius: 25px;
   padding: 40px;
@@ -2370,7 +2543,11 @@ section,
   right: -20%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 85%) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent-color), transparent 85%) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
 }
 
@@ -2434,7 +2611,8 @@ section,
 .team .join-team-cta .cta-content .cta-actions .btn.btn-primary:hover {
   background: color-mix(in srgb, var(--accent-color), black 15%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 65%);
+  box-shadow: 0 8px 20px
+    color-mix(in srgb, var(--accent-color), transparent 65%);
 }
 
 .team .join-team-cta .cta-content .cta-actions .btn.btn-outline {
@@ -2532,14 +2710,19 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background: linear-gradient(135deg, var(--background-color), color-mix(in srgb, var(--accent-color), transparent 97%));
+  background: linear-gradient(
+    135deg,
+    var(--background-color),
+    color-mix(in srgb, var(--accent-color), transparent 97%)
+  );
 }
 
 .contact .contact-form-card {
   background: var(--surface-color);
   border-radius: 24px;
   padding: 40px;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 92%);
+  box-shadow: 0 20px 60px
+    color-mix(in srgb, var(--default-color), transparent 92%);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
   position: relative;
   overflow: hidden;
@@ -2552,7 +2735,11 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #6366f1 30%)
+  );
 }
 
 .contact .contact-form-card .form-header {
@@ -2563,7 +2750,11 @@ section,
 .contact .contact-form-card .form-header .header-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #6366f1 30%)
+  );
   border-radius: 18px;
   display: flex;
   align-items: center;
@@ -2595,7 +2786,11 @@ section,
   padding: 16px 20px;
   border-radius: 16px;
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 88%);
-  background-color: color-mix(in srgb, var(--surface-color), var(--background-color) 30%);
+  background-color: color-mix(
+    in srgb,
+    var(--surface-color),
+    var(--background-color) 30%
+  );
   color: var(--default-color);
   font-size: 15px;
   transition: all 0.3s ease;
@@ -2621,7 +2816,11 @@ section,
 
 .contact .contact-form-card .php-email-form .submit-btn {
   width: 100%;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #6366f1 30%)
+  );
   color: var(--contrast-color);
   border: none;
   padding: 16px 30px;
@@ -2644,13 +2843,19 @@ section,
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--contrast-color), transparent 85%), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--contrast-color), transparent 85%),
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
 .contact .contact-form-card .php-email-form .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px color-mix(in srgb, var(--accent-color), transparent 75%);
+  box-shadow: 0 12px 35px
+    color-mix(in srgb, var(--accent-color), transparent 75%);
 }
 
 .contact .contact-form-card .php-email-form .submit-btn:hover:before {
@@ -2715,7 +2920,8 @@ section,
 
 .contact .contact-info-area .method-card:hover {
   transform: translateX(8px);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 88%);
+  box-shadow: 0 8px 30px
+    color-mix(in srgb, var(--accent-color), transparent 88%);
   border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
@@ -2772,7 +2978,11 @@ section,
   display: flex;
   gap: 30px;
   padding: 30px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 96%), color-mix(in srgb, var(--accent-color), transparent 92%));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 96%),
+    color-mix(in srgb, var(--accent-color), transparent 92%)
+  );
   border-radius: 20px;
   margin-bottom: 30px;
 }
@@ -2781,14 +2991,24 @@ section,
   text-align: center;
 }
 
-.contact .contact-info-area .additional-info .info-stats .stat-item .stat-number {
+.contact
+  .contact-info-area
+  .additional-info
+  .info-stats
+  .stat-item
+  .stat-number {
   font-size: 24px;
   font-weight: 700;
   color: var(--accent-color);
   margin-bottom: 4px;
 }
 
-.contact .contact-info-area .additional-info .info-stats .stat-item .stat-label {
+.contact
+  .contact-info-area
+  .additional-info
+  .info-stats
+  .stat-item
+  .stat-label {
   font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-weight: 500;
@@ -2811,7 +3031,12 @@ section,
   gap: 12px;
 }
 
-.contact .contact-info-area .additional-info .social-connect .social-links .social-link {
+.contact
+  .contact-info-area
+  .additional-info
+  .social-connect
+  .social-links
+  .social-link {
   width: 40px;
   height: 40px;
   background: var(--surface-color);
@@ -2825,14 +3050,26 @@ section,
   transition: all 0.3s ease;
 }
 
-.contact .contact-info-area .additional-info .social-connect .social-links .social-link:hover {
+.contact
+  .contact-info-area
+  .additional-info
+  .social-connect
+  .social-links
+  .social-link:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 80%);
+  box-shadow: 0 6px 20px
+    color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.contact .contact-info-area .additional-info .social-connect .social-links .social-link i {
+.contact
+  .contact-info-area
+  .additional-info
+  .social-connect
+  .social-links
+  .social-link
+  i {
   font-size: 16px;
 }
 
@@ -2898,22 +3135,42 @@ section,
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-wrapper {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-wrapper {
   height: auto !important;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-slide img {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-slide
+  img {
   aspect-ratio: 3/2;
   object-fit: cover;
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev {
   background-color: var(--contrast-color);
   width: 40px;
   height: 40px;
@@ -2921,20 +3178,44 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:after,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:after {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next:after,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev:after {
   font-size: 16px;
   color: var(--accent-color);
   font-weight: bold;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:hover,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:hover {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next:hover,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev:hover {
   background-color: var(--accent-color);
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:hover:after,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:hover:after {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next:hover:after,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev:hover:after {
   color: var(--contrast-color);
 }
 
@@ -2989,7 +3270,11 @@ section,
   margin-bottom: 1.5rem;
 }
 
-.portfolio-details .portfolio-details-content .project-meta .badge-wrapper .project-badge {
+.portfolio-details
+  .portfolio-details-content
+  .project-meta
+  .badge-wrapper
+  .project-badge {
   display: inline-block;
   padding: 8px 16px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -3004,14 +3289,23 @@ section,
   gap: 1.5rem;
 }
 
-.portfolio-details .portfolio-details-content .project-meta .date-client .meta-item {
+.portfolio-details
+  .portfolio-details-content
+  .project-meta
+  .date-client
+  .meta-item {
   display: flex;
   align-items: center;
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.portfolio-details .portfolio-details-content .project-meta .date-client .meta-item i {
+.portfolio-details
+  .portfolio-details-content
+  .project-meta
+  .date-client
+  .meta-item
+  i {
   margin-right: 6px;
   color: var(--accent-color);
 }
@@ -3056,13 +3350,23 @@ section,
   margin-bottom: 1.5rem;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item {
   border: none;
   background: none;
   margin-bottom: 10px;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button {
   padding: 1rem;
   font-weight: 600;
   font-size: 1rem;
@@ -3072,7 +3376,13 @@ section,
   box-shadow: none;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button:not(.collapsed) {
   background-color: var(--surface-color);
   color: var(--accent-color);
   border-bottom-left-radius: 0 !important;
@@ -3080,28 +3390,59 @@ section,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) i {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button:not(.collapsed)
+  i {
   color: var(--accent-color);
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button::after {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button::after {
   background-size: 14px;
   width: 14px;
   height: 14px;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button i {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button
+  i {
   font-size: 1.1rem;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-body {
   padding: 1rem;
   background-color: var(--surface-color);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body p {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-body
+  p {
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
   line-height: 1.6;
@@ -3129,7 +3470,11 @@ section,
   padding-left: 0;
 }
 
-.portfolio-details .portfolio-details-content .project-features .feature-list li {
+.portfolio-details
+  .portfolio-details-content
+  .project-features
+  .feature-list
+  li {
   display: flex;
   align-items: center;
   padding: 8px 0;
@@ -3137,7 +3482,12 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
-.portfolio-details .portfolio-details-content .project-features .feature-list li i {
+.portfolio-details
+  .portfolio-details-content
+  .project-features
+  .feature-list
+  li
+  i {
   color: var(--accent-color);
   margin-right: 10px;
   font-size: 1.1em;
@@ -3159,7 +3509,10 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio-details .portfolio-details-content .cta-buttons .btn-view-project:hover {
+.portfolio-details
+  .portfolio-details-content
+  .cta-buttons
+  .btn-view-project:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 15%);
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -3181,11 +3534,18 @@ section,
   transition: transform 0.3s ease;
 }
 
-.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project:hover {
+.portfolio-details
+  .portfolio-details-content
+  .cta-buttons
+  .btn-next-project:hover {
   background-color: color-mix(in srgb, var(--heading-color), transparent 80%);
 }
 
-.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project:hover i {
+.portfolio-details
+  .portfolio-details-content
+  .cta-buttons
+  .btn-next-project:hover
+  i {
   transform: translateX(3px);
 }
 
@@ -3319,7 +3679,10 @@ section,
   position: relative;
 }
 
-.service-details .service-process .process-steps .step-item:not(:last-child)::after {
+.service-details
+  .service-process
+  .process-steps
+  .step-item:not(:last-child)::after {
   content: "";
   position: absolute;
   left: 1.5rem;
@@ -3385,7 +3748,8 @@ section,
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .service-details .service-facts li:last-child {
@@ -3415,21 +3779,35 @@ section,
   gap: 1rem;
 }
 
-.service-details .service-testimonial .testimonial-content .testimonial-author .author-image {
+.service-details
+  .service-testimonial
+  .testimonial-content
+  .testimonial-author
+  .author-image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.service-details .service-testimonial .testimonial-content .testimonial-author .author-info h5 {
+.service-details
+  .service-testimonial
+  .testimonial-content
+  .testimonial-author
+  .author-info
+  h5 {
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
   color: var(--heading-color);
 }
 
-.service-details .service-testimonial .testimonial-content .testimonial-author .author-info span {
+.service-details
+  .service-testimonial
+  .testimonial-content
+  .testimonial-author
+  .author-info
+  span {
   font-size: 0.9rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
@@ -3444,12 +3822,13 @@ section,
 
 .service-details .inquiry-form .form-control:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 80%);
+  box-shadow: 0 0 0 0.2rem
+    color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.service-details .inquiry-form input[type=text],
-.service-details .inquiry-form input[type=email],
-.service-details .inquiry-form input[type=tel],
+.service-details .inquiry-form input[type="text"],
+.service-details .inquiry-form input[type="email"],
+.service-details .inquiry-form input[type="tel"],
 .service-details .inquiry-form textarea {
   color: var(--default-color);
   background-color: var(--surface-color);
@@ -3457,16 +3836,16 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.service-details .inquiry-form input[type=text]:focus,
-.service-details .inquiry-form input[type=email]:focus,
-.service-details .inquiry-form input[type=tel]:focus,
+.service-details .inquiry-form input[type="text"]:focus,
+.service-details .inquiry-form input[type="email"]:focus,
+.service-details .inquiry-form input[type="tel"]:focus,
 .service-details .inquiry-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.service-details .inquiry-form input[type=text]::placeholder,
-.service-details .inquiry-form input[type=email]::placeholder,
-.service-details .inquiry-form input[type=tel]::placeholder,
+.service-details .inquiry-form input[type="text"]::placeholder,
+.service-details .inquiry-form input[type="email"]::placeholder,
+.service-details .inquiry-form input[type="tel"]::placeholder,
 .service-details .inquiry-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
@@ -3666,7 +4045,11 @@ section,
   }
 }
 
-.terms-of-service .tos-content .content-section .prohibited-list .prohibited-item {
+.terms-of-service
+  .tos-content
+  .content-section
+  .prohibited-list
+  .prohibited-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -3675,12 +4058,22 @@ section,
   border-radius: 12px;
 }
 
-.terms-of-service .tos-content .content-section .prohibited-list .prohibited-item i {
+.terms-of-service
+  .tos-content
+  .content-section
+  .prohibited-list
+  .prohibited-item
+  i {
   color: #dc3545;
   font-size: 1.2rem;
 }
 
-.terms-of-service .tos-content .content-section .prohibited-list .prohibited-item span {
+.terms-of-service
+  .tos-content
+  .content-section
+  .prohibited-list
+  .prohibited-item
+  span {
   font-size: 0.95rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
@@ -3711,7 +4104,12 @@ section,
   font-size: 0.95rem;
 }
 
-.terms-of-service .tos-content .content-section .disclaimer-box ul li:last-child {
+.terms-of-service
+  .tos-content
+  .content-section
+  .disclaimer-box
+  ul
+  li:last-child {
   margin-bottom: 0;
 }
 
@@ -3748,7 +4146,11 @@ section,
 }
 
 .terms-of-service .tos-contact .contact-box {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, color-mix(in srgb, var(--accent-color), transparent 98%) 100%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 98%) 100%
+  );
   border-radius: 20px;
   padding: 40px;
   display: flex;
@@ -3806,7 +4208,11 @@ section,
   transition: all 0.3s;
 }
 
-.terms-of-service .tos-contact .contact-box .contact-content .contact-link:hover {
+.terms-of-service
+  .tos-contact
+  .contact-box
+  .contact-content
+  .contact-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -3832,7 +4238,8 @@ section,
 .privacy .privacy-header {
   margin-bottom: 60px;
   text-align: center;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
   padding-bottom: 40px;
 }
 
@@ -3922,7 +4329,8 @@ section,
   max-width: 800px;
   margin: 0 auto;
   padding-top: 40px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .privacy .privacy-contact h2 {
@@ -4028,7 +4436,11 @@ section,
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--accent-color), transparent 97%) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--surface-color) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 97%) 100%
+  );
 }
 
 .error-404 .error-number {
@@ -4166,7 +4578,8 @@ section,
 
 .error-404 .helpful-links .link-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 8px 30px
+    color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--accent-color);
   border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
 }
